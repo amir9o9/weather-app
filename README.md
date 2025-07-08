@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+```markdown
+# 🌦️ Weather App
 
-First, run the development server:
+A simple and elegant web application that displays the current weather conditions—including temperature, humidity, wind speed, and general atmospheric status—for any city you choose.
 
+## 🛠️ Built With
+
+This project is developed using modern web technologies:
+
+- **HTML, CSS, JavaScript** – for foundational structure and behavior
+- **React** – for building interactive UI components
+- **Next.js** – for server-side rendering, routing, and performance optimization
+- **Tailwind CSS** – for rapid and responsive styling with utility-first classes
+
+## 🌍 Features
+
+- Displays temperature, humidity, wind speed, and weather conditions for selected cities
+- Fully responsive design for both desktop and mobile devices
+- Fast load times powered by Next.js optimization
+- Clean and modern UI built with Tailwind CSS
+
+## 🚀 Getting Started
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Navigate to the project folder and install dependencies:
+```bash
+cd weather-app
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Your app will be available at `http://localhost:3000`.
 
-## Learn More
+## 📦 Weather API
 
-To learn more about Next.js, take a look at the following resources:
+Weather data is retrieved from an external API (e.g., OpenWeatherMap or WeatherAPI). Make sure to add your API key to the `.env.local` file:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+NEXT_PUBLIC_WEATHER_API_KEY=your_api_key_here
+```
