@@ -1,6 +1,12 @@
 "use client"
 import React, { useState , useRef} from 'react'
 import Image from 'next/image'
+import { Poppins } from 'next/font/google';
+
+const poppinsFont = Poppins({
+        subsets: ["latin"],
+        weight: "400"
+})
 
 function Card() {
 
@@ -59,10 +65,9 @@ function Card() {
 
     }
 
-    
 
   return (
-    <div className=" box-border m-auto mt-20 pt-[25px] pb-[25px] max-w-[470px] w-90 rounded-[17px] bg-linear-65 from-purple-500 to-pink-500">
+    <div className={`${poppinsFont.className} font-display box-border m-auto mt-20 pt-[25px] pb-[25px] max-w-[470px] w-90 rounded-[17px] bg-linear-65 from-purple-500 to-pink-500`}>
 {/* search */}
         <div  className={`search flex items-center justify-center`}>
             <input type="text" ref={inputRef} placeholder='Enter city name' spellCheck='false' className='w-65 bg-white outline-none m-[8px] p-[10px] pl-[15px] rounded-[60px] text-black' />
@@ -127,5 +132,6 @@ function Card() {
     </div>
   )
 }
+
 
 export default Card
