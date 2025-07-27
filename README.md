@@ -42,8 +42,4 @@ Your app will be available at `http://localhost:3000`.
 
 ## 📦 Weather API
 
-Weather data is retrieved from an external API (e.g., OpenWeatherMap or WeatherAPI). Make sure to add your API key to the `.env.local` file:
-
-```
-NEXT_PUBLIC_WEATHER_API_KEY=your_api_key_here
-```
+Weather data is retrieved from an external API (e.g., OpenWeatherMap or WeatherAPI).
