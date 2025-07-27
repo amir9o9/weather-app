@@ -22,7 +22,7 @@ function Card() {
     const [weatherIcon , setWeatherIcon] = useState("/") 
 
     const [errorStatus , setErrorStatus] = useState("nothig"); 
-    
+    const time = new Date();
     async function checkWeather(city){
 
         
@@ -34,30 +34,60 @@ function Card() {
 
         else{
             let data = await response.json();
-
             setCityName(data.name) ;
             setTemp(Math.round(data.main.temp) +" °C");
             setHumidity(data.main.humidity+" %");
             setWind(data.wind.speed +" km/h");
 
             if(data.weather[0].main == "Clouds"){
+                if(time>19){
+                    setWeatherIcon("/clouds-n.png")
+
+                }else{
                     setWeatherIcon("/clouds.png")
                 }
-                else if(data.weather[0].main == "Clear"){
+                
+            }
+            else if(data.weather[0].main == "Clear"){
+                if(time>19){
+                    setWeatherIcon("/clear-n.png")
+
+                }else{
                     setWeatherIcon("/clear.png")
                 }
-                else if(data.weather[0].main == "Rain"){
+            }
+            else if(data.weather[0].main == "Rain"){
+                if(time>19){
+                    setWeatherIcon("/rain-n.png")
+
+                }else{
                     setWeatherIcon("/rain.png")
                 }
-                else if(data.weather[0].main == "Drizzle"){
+            }
+            else if(data.weather[0].main == "Drizzle"){
+                if(time>19){
+                    setWeatherIcon("/drizzle-n.png")
+
+                }else{
                     setWeatherIcon("/drizzle.png")
                 }
-                else if(data.weather[0].main == "Mist"){
+            }
+            else if(data.weather[0].main == "Mist"){
+                if(time>19){
+                    setWeatherIcon("/mist-n.png")
+
+                }else{
                     setWeatherIcon("/mist.png")
                 }
-                else if(data.weather[0].main == "Snow"){
+            }
+            else if(data.weather[0].main == "Snow"){
+                if(time>19){
+                    setWeatherIcon("/snow-n.png")
+
+                }else{
                     setWeatherIcon("/snow.png")
                 }
+            }
             
             setErrorStatus("ok");
 
@@ -65,7 +95,7 @@ function Card() {
 
     }
 
-
+    
   return (
     <div className={`${poppinsFont.className} font-display box-border m-auto mt-20 pt-[25px] pb-[25px] max-w-[470px] w-90 rounded-[17px] bg-linear-65 from-purple-500 to-pink-500`}>
 {/* search */}
