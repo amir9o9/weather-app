@@ -40,7 +40,7 @@ function Card() {
             setWind(data.wind.speed +" km/h");
 
             if(data.weather[0].main == "Clouds"){
-                if(time>19){
+                if(time.getHours()>19){
                     setWeatherIcon("/clouds-n.png")
 
                 }else{
@@ -49,7 +49,7 @@ function Card() {
                 
             }
             else if(data.weather[0].main == "Clear"){
-                if(time>19){
+                if(time.getHours()>19){
                     setWeatherIcon("/clear-n.png")
 
                 }else{
@@ -57,7 +57,7 @@ function Card() {
                 }
             }
             else if(data.weather[0].main == "Rain"){
-                if(time>19){
+                if(time.getHours()>19){
                     setWeatherIcon("/rain-n.png")
 
                 }else{
@@ -65,7 +65,7 @@ function Card() {
                 }
             }
             else if(data.weather[0].main == "Drizzle"){
-                if(time>19){
+                if(time.getHours()>19){
                     setWeatherIcon("/drizzle-n.png")
 
                 }else{
@@ -73,7 +73,7 @@ function Card() {
                 }
             }
             else if(data.weather[0].main == "Mist"){
-                if(time>19){
+                if(time.getHours()>19){
                     setWeatherIcon("/mist-n.png")
 
                 }else{
