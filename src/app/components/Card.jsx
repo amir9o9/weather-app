@@ -75,7 +75,6 @@ function Card() {
             else if(data.weather[0].main == "Mist"){
                 if(time.getHours()>19){
                     setWeatherIcon("/mist-n.png")
-
                 }else{
                     setWeatherIcon("/mist.png")
                 }
@@ -97,10 +96,17 @@ function Card() {
 
     
   return (
-    <div className={`${poppinsFont.className} font-display box-border m-auto mt-20 pt-[25px] pb-[25px] max-w-[470px] w-90 rounded-[17px] bg-linear-65 from-purple-500 to-pink-500`}>
+    <div className={`${poppinsFont.className} text[min(10vw,70px)] m-auto mt-20 pt-[25px] pb-[25px] max-w-[470px] w-90 rounded-[17px] bg-linear-65 from-purple-500 to-pink-500
+        border-box    
+        [@media(max-width:470px)]:max-w-[370px]
+        [@media(max-width:470px)]:pt-3
+        [@media(max-width:470px)]:pb-3
+        [@media(max-width:470px)]:px-2
+    `}>
 {/* search */}
         <div  className={`search flex items-center justify-center`}>
-            <input type="text" ref={inputRef} placeholder='Enter city name' spellCheck='false' className='w-65 bg-white outline-none m-[8px] p-[10px] pl-[15px] rounded-[60px] text-black' />
+            <input type="text" ref={inputRef} placeholder='Enter city name' spellCheck='false' className='
+             bg-white outline-none p-3 pl-5 rounded-full text-black'/>
             <button onClick={()=>checkWeather(inputRef.current.value)} className='flex justify-center items-center bg-white rounded-full m-[8px] w-[45px] h-[45px]'>
                 <Image
                     src="/search.png"
